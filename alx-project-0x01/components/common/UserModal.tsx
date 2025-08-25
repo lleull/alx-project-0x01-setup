@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UserData, UserModalProps } from "../../interfaces";
 
-const UserModal: React.FC<UserModalProps> = ({ onClose, onSave }) => {
+const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
   const [user, setUser] = useState<UserData>({
     id: 0,
     name: "",
@@ -63,7 +63,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSave }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSave(user);
+    onSubmit(user);
     onClose();
   };
 
