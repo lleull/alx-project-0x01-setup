@@ -80,7 +80,7 @@ export interface UserModalProps {
   user: UserData;
   isOpen: boolean;
   onClose: () => void;
-  onSubmit?: (user: UserProps) => void;
+  onSubmit?: (post: UserProps) => void;
   onDelete?: (userId: number) => void;
   mode?: "view" | "edit" | "create";
 }
