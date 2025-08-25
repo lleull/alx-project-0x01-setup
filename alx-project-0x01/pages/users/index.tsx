@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
+import UserCard from "../../components/common/UserCard";
 
 interface User {
   id: string;
@@ -11,7 +12,7 @@ interface User {
   joined: string;
 }
 
-const UsersPage: NextPage = () => {
+const Users: NextPage = () => {
   const sampleUsers: User[] = [
     {
       id: "1",
@@ -65,26 +66,7 @@ const UsersPage: NextPage = () => {
         {/* Users Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {sampleUsers.map((user) => (
-            <div
-              key={user.id}
-              className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow"
-            >
-              <Image
-                src={user.avatar}
-                alt={user.name}
-                className="w-16 h-16 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">{user.name}</h3>
-              <p className="text-blue-600 text-sm mb-2">{user.role}</p>
-              <p className="text-gray-600 text-sm mb-3">{user.email}</p>
-              <div className="flex justify-center space-x-4 text-sm text-gray-500">
-                <span>{user.postsCount} posts</span>
-                <span>Joined {user.joined}</span>
-              </div>
-              <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                View Profile
-              </button>
-            </div>
+            <UserCard key={user.id} user={user} />
           ))}
         </div>
 
@@ -120,4 +102,4 @@ export async function getStaticProps() {
   };
 }
 
-export default UsersPage;
+export default Users;
