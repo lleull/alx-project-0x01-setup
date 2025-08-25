@@ -50,3 +50,37 @@ export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
 }
+
+interface Address {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
+}
+
+interface Company {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
+export interface UserData {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
+}
+
+export interface UserModalProps {
+  user: UserData;
+  isOpen: boolean;
+  onClose: () => void;
+  onSave?: (user: UserData) => void;
+  onDelete?: (userId: number) => void;
+  mode?: "view" | "edit" | "create";
+}

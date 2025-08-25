@@ -13,7 +13,7 @@ interface User {
 }
 
 const Users: NextPage = () => {
-  const sampleUsers: User[] = [
+  const posts: User[] = [
     {
       id: "1",
       name: "John Doe",
@@ -65,7 +65,7 @@ const Users: NextPage = () => {
 
         {/* Users Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sampleUsers.map((user) => (
+          {posts.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}
         </div>
