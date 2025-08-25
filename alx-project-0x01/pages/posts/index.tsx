@@ -1,6 +1,5 @@
-import { NextPage } from 'next';
-import PostCard from '../../components/common/PostCard';
-
+import { NextPage } from "next";
+import PostCard from "../../components/common/PostCard";
 interface Post {
   id: string;
   title: string;
@@ -17,40 +16,43 @@ interface Post {
 const PostsPage: NextPage = () => {
   const samplePosts: Post[] = [
     {
-      id: '1',
-      title: 'Getting Started with Next.js and Tailwind CSS',
-      excerpt: 'Learn how to set up a modern web application using Next.js and Tailwind CSS with best practices and performance optimizations.',
+      id: "1",
+      title: "Getting Started with Next.js and Tailwind CSS",
+      excerpt:
+        "Learn how to set up a modern web application using Next.js and Tailwind CSS with best practices and performance optimizations.",
       author: {
-        name: 'John Doe',
-        avatar: '/api/placeholder/32/32'
+        name: "John Doe",
+        avatar: "/api/placeholder/32/32",
       },
-      date: 'Dec 12, 2023',
-      image: '/api/placeholder/400/200',
-      tags: ['Next.js', 'Tailwind', 'React']
+      date: "Dec 12, 2023",
+      image: "/api/placeholder/400/200",
+      tags: ["Next.js", "Tailwind", "React"],
     },
     {
-      id: '2',
-      title: 'Advanced TypeScript Patterns for React',
-      excerpt: 'Discover advanced TypeScript patterns that will make your React components more type-safe and maintainable.',
+      id: "2",
+      title: "Advanced TypeScript Patterns for React",
+      excerpt:
+        "Discover advanced TypeScript patterns that will make your React components more type-safe and maintainable.",
       author: {
-        name: 'Jane Smith',
-        avatar: '/api/placeholder/32/32'
+        name: "Jane Smith",
+        avatar: "/api/placeholder/32/32",
       },
-      date: 'Dec 10, 2023',
-      tags: ['TypeScript', 'React', 'Patterns']
+      date: "Dec 10, 2023",
+      tags: ["TypeScript", "React", "Patterns"],
     },
     {
-      id: '3',
-      title: 'Building Responsive UIs with Tailwind CSS',
-      excerpt: 'Master the art of creating responsive user interfaces using Tailwind CSS utility classes and responsive design principles.',
+      id: "3",
+      title: "Building Responsive UIs with Tailwind CSS",
+      excerpt:
+        "Master the art of creating responsive user interfaces using Tailwind CSS utility classes and responsive design principles.",
       author: {
-        name: 'Mike Johnson',
-        avatar: '/api/placeholder/32/32'
+        name: "Mike Johnson",
+        avatar: "/api/placeholder/32/32",
       },
-      date: 'Dec 8, 2023',
-      image: '/api/placeholder/400/200',
-      tags: ['CSS', 'Responsive', 'Design']
-    }
+      date: "Dec 8, 2023",
+      image: "/api/placeholder/400/200",
+      tags: ["CSS", "Responsive", "Design"],
+    },
   ];
 
   return (

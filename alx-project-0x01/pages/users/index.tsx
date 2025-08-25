@@ -1,5 +1,5 @@
-import { NextPage } from "next";
-import Image from "next/image";
+import { NextPage } from 'next';
+import Image from 'next/image';
 
 interface User {
   id: string;
@@ -14,41 +14,41 @@ interface User {
 const UsersPage: NextPage = () => {
   const sampleUsers: User[] = [
     {
-      id: "1",
-      name: "John Doe",
-      email: "john@example.com",
-      role: "Admin",
-      avatar: "/api/placeholder/64/64",
+      id: '1',
+      name: 'John Doe',
+      email: 'john@example.com',
+      role: 'Admin',
+      avatar: '/api/placeholder/64/64',
       postsCount: 24,
-      joined: "2023-01-15",
+      joined: '2023-01-15'
     },
     {
-      id: "2",
-      name: "Jane Smith",
-      email: "jane@example.com",
-      role: "Author",
-      avatar: "/api/placeholder/64/64",
+      id: '2',
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      role: 'Author',
+      avatar: '/api/placeholder/64/64',
       postsCount: 18,
-      joined: "2023-02-20",
+      joined: '2023-02-20'
     },
     {
-      id: "3",
-      name: "Mike Johnson",
-      email: "mike@example.com",
-      role: "Author",
-      avatar: "/api/placeholder/64/64",
+      id: '3',
+      name: 'Mike Johnson',
+      email: 'mike@example.com',
+      role: 'Author',
+      avatar: '/api/placeholder/64/64',
       postsCount: 12,
-      joined: "2023-03-10",
+      joined: '2023-03-10'
     },
     {
-      id: "4",
-      name: "Sarah Wilson",
-      email: "sarah@example.com",
-      role: "Contributor",
-      avatar: "/api/placeholder/64/64",
+      id: '4',
+      name: 'Sarah Wilson',
+      email: 'sarah@example.com',
+      role: 'Contributor',
+      avatar: '/api/placeholder/64/64',
       postsCount: 8,
-      joined: "2023-04-05",
-    },
+      joined: '2023-04-05'
+    }
   ];
 
   return (
@@ -65,10 +65,7 @@ const UsersPage: NextPage = () => {
         {/* Users Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {sampleUsers.map((user) => (
-            <div
-              key={user.id}
-              className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow"
-            >
+            <div key={user.id} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
               <Image
                 src={user.avatar}
                 alt={user.name}
